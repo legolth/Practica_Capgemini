@@ -1,0 +1,35 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- año  -->
+    <ng-container matColumnDef="anio">
+      <th mat-header-cell *matHeaderCellDef> Año. </th>
+      <td mat-cell *matCellDef="let element"> {{element.anio}} </td>
+    </ng-container>
+  
+    <!-- saldo inicial  -->
+    <ng-container matColumnDef="salIni">
+      <th mat-header-cell *matHeaderCellDef> Saldo inicial </th>
+      <td mat-cell *matCellDef="let element"> {{element.salIni}} </td>
+    </ng-container>
+  
+    <!-- aportacion  -->
+    <ng-container matColumnDef="aport">
+      <th mat-header-cell *matHeaderCellDef> Aportación </th>
+      <td mat-cell *matCellDef="let element"> {{element.aport}} </td>
+    </ng-container>
+  
+    <!-- rendimientos  -->
+    <ng-container matColumnDef="rendim">
+      <th mat-header-cell *matHeaderCellDef> Rendimiento </th>
+      <td mat-cell *matCellDef="let element"> {{element.rendim}} </td>
+    </ng-container>
+
+    <!-- saldo final  -->    
+    <ng-container matColumnDef="salFinal">
+      <th mat-header-cell *matHeaderCellDef> Saldo final </th>
+      <td mat-cell *matCellDef="let element"> {{element.salFinal}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  

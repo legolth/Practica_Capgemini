@@ -1,0 +1,61 @@
+
+<form>
+      <div class="alert alert-danger" role="alert"  *ngIf="exception">
+        <strong>Warning!  </strong> {{exception}}      
+    </div>
+    <div class="form-row">     
+        <div class="col-md-2 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">Inversion Inicial</span>
+              </div>
+              <input type="number" name="invIni" class="form-control" aria-describedby="inputGroupPrepend3" [(ngModel)]="info.invIni">
+            </div>
+          </div>
+    
+          <div class="col-md-2 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">Aportación anual</span>
+              </div>
+              <input type="number"  name="aportA" class="form-control" aria-describedby="inputGroupPrepend3" [(ngModel)]="info.aportA">
+            </div>
+          </div>
+    
+          <div class="col-md-4 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">% De incremento a la aportación anual</span>
+              </div>
+              <input type="number" min = "0" max = "100" maxlength ="3" name="pincrPA" class="form-control" aria-describedby="inputGroupPrepend3" [(ngModel)]="info.pincrPA" >
+            </div>
+          </div>   
+    </div>
+    <div class="form-row">
+        <div class="col-md-2 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">Años de inversión</span>
+              </div>
+              <input type="number"  name="anioInv" class="form-control" aria-describedby="inputGroupPrepend3" [(ngModel)]="info.anioInv">
+            </div>
+          </div>
+    
+          <div class="col-md-2 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">Rendimiento de inversión</span>
+              </div>
+              <input type="number"  name="rendim" class="form-control" aria-describedby="inputGroupPrepend3" [(ngModel)]="info.rendim">
+            </div>
+          </div>         
+          </div>
+    <div class="form-row">
+            <div class= "col-md-3 offset-md-9">
+             <button type="button" class="btn btn-outline-success" (click)="starSimulated()">Calcular</button>       
+              <button type="button" class="btn btn-outline-success" (click)="cleanInfo()">Limpiar</button>
+          </div>
+    </div>
+</form>
+
+
